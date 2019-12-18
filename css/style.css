@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+html, body{
+    height: 100%;
+    background-color: var(--backingCol);
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+:root{
+    --topBarColor: rgba(255,255,255,.5);
+    --topBarAnimLength: .5s;
+    --backingCol: salmon;
+    --barSize: 10vh;
+} 
+/*Menu Animations*/
+@keyframes show{
+    from{width: 90%;  border-radius: 15px 15px 0 0;}
+    to{width: 100%; border-radius: 0;}
+}
+@keyframes notShow{
+    from{width: 100%; border-radius: 0;}
+    to{width: 90%; border-radius: 15px 15px 0 0;}
+}
+@keyframes reveal{
+    from{height: 0;}
+    to{ height: var(--barSize);}
+}
+@keyframes hide{
+    from{height: var(--barSize);}
+    to{height: 0; }
+}
+@keyframes color{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes noColor{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+@keyframes square{
+    from{border-radius: 15px 15px 0 0;}
+    to{border-radius: 0;;}
+}
+@keyframes round{
+    from{border-radius: 0;}
+    to{border-radius: 15px 15px 0 0;}
+}
+.square{
+    animation-name: square;
+    animation-duration: 1s;
+}
+.round{
+    animation-name: round;
+    animation-duration: 1s;
+    border-radius: 15px 15px 0 0;
+}
+.reveal{
+    display: block;
+    height: 0;
+    animation-name: reveal;
+    animation-duration: 1s;
+    height: var(--barSize);
+}
+.hide{
+    height: var(--barSize);
+    animation-name: hide;
+    animation-duration: 1s;
+    height: 0;
+}
+.shrink{
+    animation-name: notShow;
+    animation-duration: 1s;
+    width: 90%;
+    border-radius: 15px 15px 0 0;
+}
+.dn{
+    display: none;
+}
+.grow{
+    animation-name: show;
+    animation-duration: 1s;
+    border-radius: 0;
+}
+.color{
+    animation-name: color;
+    animation-duration: var(--topBarAnimLength);
+    background-color: var(--topBarColor);
+}
+.noColor{
+    background-color: var(--topBarColor);
+    animation-name: noColor;
+    animation-duration: var(--topBarAnimLength);
+    opacity: 0;
+}
+/*Sizing and Styling of Main Elements*/
+#mainBox{
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    flex-direction: column;
+}
+#topBar{
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    /* position: absolute; */
+}
+#content{
+    background-color: pink;
+    width: 100%;
+    flex-grow: 5;
+}
+#links{
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+#menu{
+    justify-content: space-around;
+    background-color: var(--backingCol);
+}
+#links{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    list-style: none;
+}
+ul[id="links"] > li{
+    text-decoration: none;
+    padding-bottom: 2%;
+}
+#burger{
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+    opacity: 1;
+}
+.fas.fa-bars{
+    float: right;
+    color: black;
+    font-size: 5vh;
+}
