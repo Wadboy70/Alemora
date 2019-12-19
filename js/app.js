@@ -7,6 +7,10 @@ var moving = true;
 
 bars.addEventListener("click", ()=>{
     if(((!box.classList.contains("grow") && !box.classList.contains("shrink")) || box.classList.contains("grow"))&& moving){
+        moving = false;
+        setTimeout(function(){
+            moving = true;
+        },1000);
         box.classList.remove("grow");
         box.classList.add("shrink");
         menu.classList.add("reveal");
@@ -17,7 +21,7 @@ bars.addEventListener("click", ()=>{
         topBar.classList.add("reveal");
         content.classList.add("round");
         content.classList.remove("square");        
-    }else{
+    }else if (moving) {
         moving = false;
         box.classList.remove("shrink");
         box.classList.add("grow");
