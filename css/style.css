@@ -19,11 +19,11 @@ html, body{
     --contentWidth: 95%;
 }
 /*Menu Animations*/
-@keyframes show{
+@keyframes grow{
     from{width: 90%;  border-radius: 15px;}
     to{width: var(--contentWidth); border-radius: 0;}
 }
-@keyframes notShow{
+@keyframes shrink{
     from{width: var(--contentWidth); border-radius: 0;}
     to{width: 90%; border-radius: 15px;}
 }
@@ -74,7 +74,8 @@ html, body{
     height: 0;
 }
 .shrink{
-    animation-name: notShow;
+    width: var(--contentWidth);
+    animation-name: shrink;
     animation-duration: 1s;
     width: 90%;
     border-radius: 15px;
@@ -83,9 +84,10 @@ html, body{
     display: none;
 }
 .grow{
-    animation-name: show;
+    animation-name: grow;
     animation-duration: 1s;
     border-radius: 0;
+    width: var(--contentWidth);
 }
 .color{
     animation-name: color;
