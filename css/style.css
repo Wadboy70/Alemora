@@ -102,6 +102,7 @@ html, body{
 }
 /*Sizing and Styling of Main Elements*/
 #mainBox{
+    width: var(--contentWidth);
     display: flex;
     min-height: 101%;
     flex-wrap: wrap;
@@ -118,7 +119,7 @@ html, body{
 #content{
     margin: 0 auto;
     background-color: pink;
-    width: var(--contentWidth);
+    width: 100%;
     flex-grow: 5;
 }
 #links{
