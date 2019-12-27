@@ -1,0 +1,19 @@
+{
+  "name": "alemora",
+  "version": "1.0.0",
+  "description": "website for sticker-printing business & to learn webDev",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wadboy70/Alemora.git"
+  },
+  "author": "Seyi Oluwaleimu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wadboy70/Alemora/issues"
+  },
+  "homepage": "https://github.com/Wadboy70/Alemora#readme"
+}
