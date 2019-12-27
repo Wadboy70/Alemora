@@ -17,7 +17,7 @@ html, body{
     --backingCol: rgb(230, 230, 230);
     --contentColor: white;
     --barSize: 10vh;
-    --contentWidth: 98%;
+    --contentWidth: 95%;
 }
 /*Menu Animations*/
 @keyframes grow{
@@ -113,7 +113,7 @@ html, body{
 }
 #topBar{
     width: 100%;
-    height: 10%;
+    height: var(--barSize);
     background-color: var(--topBarColor);
 }
 #content{
