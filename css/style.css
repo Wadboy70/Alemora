@@ -115,6 +115,7 @@ html, body{
     width: 100%;
     height: var(--barSize);
     background-color: var(--topBarColor);
+    overflow: hidden;
 }
 #content{
     margin: 0 auto;
@@ -150,6 +151,12 @@ ul[id="links"] > li{
     top: 2.75%;
     right: 4%;
     opacity: 1;
+}
+#topBar > a > img{
+    max-height: 6vh;
+}
+#topBar > a{
+     
 }
 .fas.fa-bars{
     float: right;
