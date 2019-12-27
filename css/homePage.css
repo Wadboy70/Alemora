@@ -1,0 +1,10 @@
+div.carousel-item{
+    margin-top: 12%;
+}
+div.carousel-item > img{
+    max-width: 100%;
+    display: none;
+}
+div.selected > img{
+    display: block;
+}
