@@ -155,8 +155,8 @@ ul[id="links"] > li{
 #topBar > a > img{
     max-height: 6vh;
 }
-#topBar > a{
-     
+#topBar > a {
+    min-height: inherit;
 }
 .fas.fa-bars{
     float: right;
