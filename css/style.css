@@ -135,7 +135,7 @@ html, body{
 #links{
     display: flex;
     width: 100%;
-    height: 100%;
+    height: calc(0vh * 2);
     justify-content: space-around;
     list-style: none;
 }
@@ -144,7 +144,8 @@ html, body{
 }
 ul[id="links"] > li{
     text-decoration: none;
-    padding-bottom: 2%;
+    margin: auto 0;
+    font-size: 3vw;
 }
 #burger{
     position: absolute;
@@ -153,10 +154,20 @@ ul[id="links"] > li{
     opacity: 1;
 }
 #topBar > a > img{
+    margin: 2vh 0;
     max-height: 6vh;
 }
 #topBar > a {
     min-height: inherit;
+}
+#siteTitle{
+    background: blue;
+    width: 60%;
+    margin: 0 auto;
+}
+#siteTitle > img {
+    width: inherit;
+    margin: 0 auto;
 }
 .fas.fa-bars{
     float: right;
