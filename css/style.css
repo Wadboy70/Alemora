@@ -14,10 +14,21 @@ html, body{
 :root{
     --topBarColor: white;
     --topBarAnimLength: .5s;
+    --barSize: 10vh;
     --backingCol: rgb(230, 230, 230);
     --contentColor: white;
-    --barSize: 10vh;
     --contentWidth: 95%;
+}
+
+@media screen and (min-width: 0px){
+    :root{
+        --navSize: 5vh;
+    }
+}
+@media screen and (min-width: 1440px){
+    :root{
+        --navSize: 10vh;
+    }
 }
 /*Menu Animations*/
 @keyframes grow{
@@ -34,6 +45,14 @@ html, body{
 }
 @keyframes hide{
     from{height: var(--barSize);}
+    to{height: 0; }
+}
+@keyframes revealNav{
+    from{height: 0;}
+    to{ height: var(--navSize);}
+}
+@keyframes hideNav{
+    from{height: var(--navSize);}
     to{height: 0; }
 }
 @keyframes color{
@@ -74,6 +93,19 @@ html, body{
     animation-duration: 1s;
     height: 0;
 }
+ .revealNav{
+    display: block;
+    height: 0;
+    animation-name: revealNav;
+    animation-duration: 1s;
+    height: var(--navSize);
+}
+.hideNav{
+    height: var(--navSize);
+    animation-name: hideNav;
+    animation-duration: 1s;
+    height: 0;
+} 
 .shrink{
     width: var(--contentWidth);
     animation-name: shrink;
@@ -122,6 +154,8 @@ html, body{
     background-color: var(--contentColor);
     width: 100%;
     flex-grow: 5;
+    display: flex;
+    flex-direction: column;
 }
 #links{
     display: flex;
@@ -130,22 +164,28 @@ html, body{
 }
 #menu{
     justify-content: space-around;
-    background-color: var(--backingCol);
 }
 #links{
     display: flex;
     width: 100%;
-    height: calc(0vh * 2);
+    /* height: calc(0vh * 2); */
     justify-content: space-around;
     list-style: none;
 }
 #footer{
     height: 10vh;
 }
-ul[id="links"] > li{
-    text-decoration: none;
-    margin: auto 0;
-    font-size: 3vw;
+@media screen and (min-width: 0px){
+    ul[id="links"] > li{
+        font-size: 3vw;
+    }
+    #menu{
+    }
+}
+@media screen and (min-width: 1024px){
+    ul[id="links"] > li{
+        font-size: 1.5vw;
+    }  
 }
 #burger{
     position: absolute;
@@ -161,13 +201,15 @@ ul[id="links"] > li{
     min-height: inherit;
 }
 #siteTitle{
-    background: blue;
+    /* background: blue; */
     width: 60%;
-    margin: 0 auto;
+    align-self: center;
+    display: flex;
+    align-content: center;
 }
 #siteTitle > img {
     width: inherit;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
 }
 .fas.fa-bars{
     float: right;

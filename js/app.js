@@ -13,8 +13,8 @@ bars.addEventListener("click", ()=>{
         },1000);
         box.classList.remove("grow");
         box.classList.add("shrink");
-        menu.classList.add("reveal");
-        menu.classList.remove("hide");
+        menu.classList.add("revealNav");
+        menu.classList.remove("hideNav");
         menu.classList.remove("dn");
         topBar.classList.remove("dn");
         topBar.classList.remove("hide");
@@ -25,8 +25,8 @@ bars.addEventListener("click", ()=>{
         moving = false;
         box.classList.remove("shrink");
         box.classList.add("grow");
-        menu.classList.add("hide");
-        menu.classList.remove("reveal");
+        menu.classList.add("hideNav");
+        menu.classList.remove("revealNav");
         topBar.classList.add("hide");
         topBar.classList.remove("reveal");
         content.classList.add("square");
@@ -35,7 +35,7 @@ bars.addEventListener("click", ()=>{
             menu.classList.add("dn");
             topBar.classList.add("dn");
             moving = true;
-            if(menu.classList.contains("reveal")){
+            if(menu.classList.contains("revealNav")){
                 menu.classList.remove("dn");
                 topBar.classList.remove("dn");
             }
