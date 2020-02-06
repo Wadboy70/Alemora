@@ -32,3 +32,6 @@ div.selected > img{
     animation: movingOn 1s;
     transform: translateX(0%)
 }
+.carousel-item.selected{
+    margin: 0;
+}
