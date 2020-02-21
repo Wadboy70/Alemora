@@ -24,10 +24,19 @@ html, body{
     :root{
         --navSize: 5vh;
     }
+    p{
+        font-size: x-small;
+        line-height: 2rem;
+
+    }
 }
 @media screen and (min-width: 1440px){
     :root{
         --navSize: 10vh;
+    }
+    p{
+        font-size: small;
+        line-height: 3rem;
     }
 }
 /*Menu Animations*/
@@ -156,6 +165,8 @@ html, body{
     flex-grow: 5;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 #links{
     display: flex;
@@ -178,8 +189,6 @@ html, body{
 @media screen and (min-width: 0px){
     ul[id="links"] > li{
         font-size: 3vw;
-    }
-    #menu{
     }
 }
 @media screen and (min-width: 1024px){
