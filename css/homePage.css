@@ -38,6 +38,7 @@ div.selected > img{
 
 #pricingChart{
     width: 100%;
+    margin-bottom: 7vh;
 }
 #blurb{
     display: flex;
@@ -46,4 +47,26 @@ div.selected > img{
 }
 #blurb > p{
     width: 70%;
+}
+#customOrderTitle{
+    margin-bottom: 3vh;
+}
+#customOrderButton{
+    padding: 1%;
+    margin-bottom: 5%;
+    background-color: #ED1F50;
+    font-size: 130%;
+    border: none;
+}
+#customOrderButton > a{
+    text-decoration: none;
+    color: white;
+}
+#customOrderText{
+    margin-bottom: 3vh;
+    width: 70%;
+}
+#links > li > a{
+    text-decoration: none;
+    color: black;
 }

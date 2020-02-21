@@ -25,8 +25,8 @@ html, body{
         --navSize: 5vh;
     }
     p{
-        font-size: x-small;
-        line-height: 2rem;
+        font-size: 2vw;
+        line-height: 4vw;
 
     }
 }
@@ -35,7 +35,7 @@ html, body{
         --navSize: 10vh;
     }
     p{
-        font-size: small;
+        font-size: large;
         line-height: 3rem;
     }
 }
@@ -196,11 +196,44 @@ html, body{
         font-size: 1.5vw;
     }  
 }
-#burger{
-    position: absolute;
-    top: 2.75%;
-    right: 4%;
-    opacity: 1;
+@media screen and (min-width: 0px){
+    #burger{
+        position: absolute;
+        top: .35em;
+        right: 4%;
+        opacity: 1;
+    }
+    .fas.fa-bars{
+        float: right;
+        color: black;
+        font-size: 1.5em;
+    }
+}
+@media screen and (min-width: 468px){
+    #burger{
+        position: absolute;
+        top: .8em;
+        right: 4%;
+        opacity: 1;
+    }
+    .fas.fa-bars{
+        float: right;
+        color: black;
+        font-size: 1.5em;
+    }
+}
+@media screen and (min-width: 768px){
+    #burger{
+        position: absolute;
+        top: .8em;
+        right: 4%;
+        opacity: 1;
+    }
+    .fas.fa-bars{
+        float: right;
+        color: black;
+        font-size: 2em;
+    }
 }
 #topBar > a > img{
     margin: 2vh 0;
@@ -208,6 +241,7 @@ html, body{
 }
 #topBar > a {
     min-height: inherit;
+    margin-left: 5%;
 }
 #siteTitle{
     /* background: blue; */
@@ -219,9 +253,5 @@ html, body{
 #siteTitle > img {
     width: inherit;
     margin: 0 auto 0 auto;
-}
-.fas.fa-bars{
-    float: right;
-    color: black;
-    font-size: 5vh;
+    height: auto;
 }
