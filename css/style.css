@@ -245,14 +245,14 @@ html, body{
 }
 #siteTitle{
     /* background: blue; */
-    width: 60%;
+    width: 100%;
     height: auto;
     align-self: center;
     display: flex;
     align-content: center;
 }
 #siteTitle > img {
-    width: inherit;
+    width: 60%;
     margin: 0 auto 0 auto;
     height: auto;
 }
