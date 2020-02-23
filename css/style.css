@@ -246,6 +246,7 @@ html, body{
 #siteTitle{
     /* background: blue; */
     width: 60%;
+    height: auto;
     align-self: center;
     display: flex;
     align-content: center;
